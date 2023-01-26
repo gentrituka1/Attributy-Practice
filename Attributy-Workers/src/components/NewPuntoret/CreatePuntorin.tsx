@@ -11,6 +11,7 @@ type Props = {
 
 function CreatePuntorin({ setPuntoret, puntoret }: Props) {
   let params = useParams();
+  let navigate = useNavigate()
 
   function createHandler(event: any) {
     event.preventDefault();
@@ -66,7 +67,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
     navigate("/puntoret");
   }
 
-  const navigate = useNavigate()
+  
 
   return (
     <div className="form">
