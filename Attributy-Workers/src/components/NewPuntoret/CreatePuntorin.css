@@ -1,0 +1,68 @@
+.form{
+    display: grid;
+    place-items: center;
+}
+.form-container{
+    border-radius: 30px;
+    padding: 40px;
+    width: 400px;
+    background-color: white;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 150px;
+    align-content: space-around;
+  }
+  
+  .form-container h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .form-main form{
+    display: grid;
+    gap: 20px;
+  }
+  .form-main form input{
+    all: unset;
+    border: 1px solid grey;
+    border-radius: 8px;
+    height: 20px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: text;
+  }
+  
+  .form-main form label{
+    display: grid;
+    gap: 5px;
+  }
+  
+  .form-main form label span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: #554f4f;
+    font-size: 1rem;
+  }
+  
+  .form-main form button{
+    all: unset;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-main form button:hover{
+    color: black;
+    background-color: white;
+  }
+  
+  .form-footer p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }

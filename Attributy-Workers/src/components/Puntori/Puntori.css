@@ -1,0 +1,22 @@
+.puntori-container{
+    display: grid;
+    
+}
+.puntori-container h1{
+    color: crimson;
+}
+.puntori-h1-div{
+    border-bottom: 1px solid grey;
+    padding: 20px;
+    text-align: center;
+}
+.puntori-p-div{
+    padding: 10px;
+}
+.puntori-container button{
+    color: white;
+    background-color: crimson;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid black;
+}
