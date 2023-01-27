@@ -9,6 +9,7 @@ type Props = {
 };
 
 function Puntori({ puntori, fshijPuntorin }: Props) {
+  const [showModal, setShowModal] = React.useState(false);
 
   return (
     <div className="puntori-container">

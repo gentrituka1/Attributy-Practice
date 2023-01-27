@@ -24,7 +24,6 @@ function App() {
       return puntoret.filter((puntori) => puntori.id !== id);
     });
 
-    // remove from local storage
     localStorage.setItem("puntoret", JSON.stringify(puntoret));
   }
 

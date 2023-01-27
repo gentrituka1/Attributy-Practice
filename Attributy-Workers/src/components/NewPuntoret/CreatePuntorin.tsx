@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Puntor } from "../../types";
-import EditPuntorin from "./EditPuntorin";
 import "./CreatePuntorin.css";
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 
 function CreatePuntorin({ setPuntoret, puntoret }: Props) {
   let params = useParams();
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   function createHandler(event: any) {
     event.preventDefault();
@@ -24,7 +23,15 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
       dataLindjes: event.target.dataLindjes.value,
     };
 
-    setPuntoret([...puntoret, newPuntor]);
+    if (
+      newPuntor.dataLindjes !== "" ||
+      newPuntor.email !== "" ||
+      newPuntor.emri !== "" ||
+      newPuntor.mbiemri !== "" ||
+      newPuntor.pozita !== ""
+    ) {
+      setPuntoret([...puntoret, newPuntor]);
+    }
 
     event.target.emri.value = "";
     event.target.mbiemri.value = "";
@@ -46,9 +53,18 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
       dataLindjes: event.target.dataLindjes.value,
     };
 
-    const puntori = puntoret.find((puntori) => puntori.id === Number(params.id));
+    const puntori = puntoret.find(
+      (puntori) => puntori.id === Number(params.id)
+    );
 
-    if (puntori) {
+    if (
+      puntori &&
+      (newPuntor.dataLindjes !== "" ||
+        newPuntor.email !== "" ||
+        newPuntor.emri !== "" ||
+        newPuntor.mbiemri !== "" ||
+        newPuntor.pozita !== "")
+    ) {
       puntori.emri = newPuntor.emri;
       puntori.mbiemri = newPuntor.mbiemri;
       puntori.pozita = newPuntor.pozita;
@@ -67,37 +83,43 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
     navigate("/puntoret");
   }
 
-  
-
   return (
     <div className="form">
-    <div className="form-container">
-      <div className="form-main">
-        <form onSubmit={(event) => {params.id ? editHandler(event) : createHandler(event)} }>
-          <label>
-            <span>Emri</span>
-            <input type="text" name="emri" placeholder="Emri..." />
-          </label>
-          <label>
-            <span>Mbiemri</span>
-            <input type="text" name="mbiemri" placeholder="Mbiemri..." />
-          </label>
-          <label>
-            <span>Pozita</span>
-            <input type="text" name="pozita" placeholder="Pozita..." />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="Email..." />
-          </label>
-          <label>
-            <span>Data e Lindjes</span>
-            <input type="date" name="dataLindjes" placeholder="Data e lindjes..." />
-          </label>
-          <button type="submit">{params.id ? "Edito" : "Krijo"}</button>
-        </form>
+      <div className="form-container">
+        <div className="form-main">
+          <form
+            onSubmit={(event) => {
+              params.id ? editHandler(event) : createHandler(event);
+            }}
+          >
+            <label>
+              <span>Emri</span>
+              <input type="text" name="emri" placeholder="Emri..." />
+            </label>
+            <label>
+              <span>Mbiemri</span>
+              <input type="text" name="mbiemri" placeholder="Mbiemri..." />
+            </label>
+            <label>
+              <span>Pozita</span>
+              <input type="text" name="pozita" placeholder="Pozita..." />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Email..." />
+            </label>
+            <label>
+              <span>Data e Lindjes</span>
+              <input
+                type="date"
+                name="dataLindjes"
+                placeholder="Data e lindjes..."
+              />
+            </label>
+            <button type="submit">{params.id ? "Edito" : "Krijo"}</button>
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
