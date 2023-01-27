@@ -1,6 +1,5 @@
 .puntori-container{
     display: grid;
-    
 }
 .puntori-container h1{
     color: crimson;
@@ -14,9 +13,16 @@
     padding: 10px;
 }
 .puntori-container button{
+    width: 300px;
     color: white;
     background-color: crimson;
     padding: 10px;
-    border: none;
-    border-top: 1px solid black;
+    border-top: none;
+}
+.links{
+    text-decoration: none;
+    color: royalblue;
+    width: 300px;
+    border: 1px solid black;
+    transition: all 500ms ease-in-out;
 }

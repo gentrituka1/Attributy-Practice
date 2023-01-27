@@ -13,11 +13,9 @@ function Puntoret( { puntoret, fshijPuntorin }: Props) {
 
   return (
     <div className="puntoret-container">
-      {puntoret.map((puntori: Puntor) => (
-        <Link className="links" to={`createOrEditPuntoret/${puntori.id}`}>
+      {puntoret.map((puntori: Puntor) => 
           <Puntori key={puntori.id} puntori={puntori} fshijPuntorin={fshijPuntorin} />
-        </Link>
-      ))}
+      )}
     </div>
   );
 }
