@@ -97,8 +97,8 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
             <label>
               <span>Emri</span>
               <input
-                type="text"
-                value={puntori?.emri}
+                type="text" 
+                defaultValue={puntori?.emri}
                 name="emri"
                 placeholder="Emri..."
                 required
@@ -108,7 +108,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
               <span>Mbiemri</span>
               <input
                 type="text"
-                value={puntori?.mbiemri}
+                defaultValue={puntori?.mbiemri}
                 name="mbiemri"
                 placeholder="Mbiemri..."
                 required
@@ -118,7 +118,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
               <span>Pozita</span>
               <input
                 type="text"
-                value={puntori?.pozita}
+                defaultValue={puntori?.pozita}
                 name="pozita"
                 placeholder="Pozita..."
                 required
@@ -128,7 +128,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
               <span>Email</span>
               <input
                 type="email"
-                value={puntori?.email}
+                defaultValue={puntori?.email}
                 name="email"
                 placeholder="Email..."
                 required
@@ -140,7 +140,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
                 type="date"
                 name="dataLindjes"
                 placeholder="Data e lindjes..."
-                value={puntori?.dataLindjes}
+                defaultValue={puntori?.dataLindjes}
                 required
               />
             </label>
