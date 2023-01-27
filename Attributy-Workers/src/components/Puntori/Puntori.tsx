@@ -9,9 +9,12 @@ const customStyles = {
     backgroundColor: "crimson",
     color: "white",
     border: "none",
-    padding: "10px",
+    padding: "15px 40px",
     borderRadius: "5px",
-  }
+    fontSize: "1.1rem",
+    fontWeight: "bold",
+    cursor: "pointer",
+  },
 };
 
 type Props = {
@@ -50,33 +53,49 @@ function Puntori({ puntori, fshijPuntorin }: Props) {
         Fshij
       </button>
 
-
       <Modal
         className="modal"
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
       >
-        <div style={{backgroundColor: "lightgrey", padding: 20}} className="modal-container">
-        <h1 style={{textAlign: "center"}}>Jeni i sigurt qe doni te fshini puntorin?</h1>
-        <div style={{display: "flex", justifyContent: "center", marginTop: "20px", gap: "10px"}} className="modal-buttons">
-          <button
-          style={customStyles.button}
-            onClick={() => {
-              fshijPuntorin(puntori.id);
-              setShowModal(false);
+        <div
+          style={{
+            backgroundColor: "transparent",
+            padding: 50,
+            display: "grid",
+          }}
+          className="modal-container"
+        >
+          <h1 style={{ textAlign: "center" }}>
+            Jeni i sigurt qe doni te fshini puntorin?
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "20px",
+              gap: "10px",
             }}
+            className="modal-buttons"
           >
-            Po
-          </button>
-          <button
-          style={customStyles.button}
-            onClick={() => {
-              setShowModal(false);
-            }}
-          >
-            Jo
-          </button>
-        </div>
+            <button
+              style={customStyles.button}
+              onClick={() => {
+                fshijPuntorin(puntori.id);
+                setShowModal(false);
+              }}
+            >
+              Po
+            </button>
+            <button
+              style={customStyles.button}
+              onClick={() => {
+                setShowModal(false);
+              }}
+            >
+              Jo
+            </button>
+          </div>
         </div>
       </Modal>
     </div>

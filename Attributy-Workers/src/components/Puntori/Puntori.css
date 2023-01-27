@@ -1,32 +1,35 @@
-.puntori-container{
-    display: grid;
+.puntori-container {
+  display: grid;
 }
-.puntori-container h1{
-    color: crimson;
+.puntori-container h1 {
+  color: crimson;
 }
-.puntori-h1-div{
-    border-bottom: 1px solid grey;
-    padding: 20px;
-    text-align: center;
+.puntori-h1-div {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  text-align: center;
 }
-.puntori-p-div{
-    padding: 10px;
+.puntori-p-div {
+  padding: 10px;
 }
-.puntori-container button{
-    width: 300px;
-    color: white;
-    background-color: crimson;
-    padding: 10px;
-    border-top: none;
+.puntori-container button {
+  width: 300px;
+  color: white;
+  background-color: crimson;
+  padding: 10px;
+  border-top: none;
 }
-.links{
-    text-decoration: none;
-    color: royalblue;
-    width: 300px;
-    border: 1px solid black;
-    transition: all 500ms ease-in-out;
+.links {
+  text-decoration: none;
+  color: royalblue;
+  width: 300px;
+  border: 1px solid black;
+  transition: all 500ms ease-in-out;
 }
-.modal{
-    justify-content: center;
-    transform: translateY(200px);
+
+.modal {
+  display: grid;
+  background-color: transparent;
+  justify-content: center;
+  transform: translateY(200px);
 }

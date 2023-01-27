@@ -12,6 +12,8 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
   let params = useParams();
   let navigate = useNavigate();
 
+  const puntori = puntoret.find((puntori) => puntori.id === Number(params.id));
+
   function createHandler(event: any) {
     event.preventDefault();
     const newPuntor = {
@@ -94,19 +96,43 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
           >
             <label>
               <span>Emri</span>
-              <input type="text" name="emri" placeholder="Emri..." required/>
+              <input
+                type="text"
+                value={puntori?.emri}
+                name="emri"
+                placeholder="Emri..."
+                required
+              />
             </label>
             <label>
               <span>Mbiemri</span>
-              <input type="text" name="mbiemri" placeholder="Mbiemri..." required/>
+              <input
+                type="text"
+                value={puntori?.mbiemri}
+                name="mbiemri"
+                placeholder="Mbiemri..."
+                required
+              />
             </label>
             <label>
               <span>Pozita</span>
-              <input type="text" name="pozita" placeholder="Pozita..." required/>
+              <input
+                type="text"
+                value={puntori?.pozita}
+                name="pozita"
+                placeholder="Pozita..."
+                required
+              />
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="Email..." required/>
+              <input
+                type="email"
+                value={puntori?.email}
+                name="email"
+                placeholder="Email..."
+                required
+              />
             </label>
             <label>
               <span>Data e Lindjes</span>
@@ -114,6 +140,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
                 type="date"
                 name="dataLindjes"
                 placeholder="Data e lindjes..."
+                value={puntori?.dataLindjes}
                 required
               />
             </label>

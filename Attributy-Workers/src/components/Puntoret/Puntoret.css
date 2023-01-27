@@ -1,6 +1,6 @@
-.puntoret-container{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 20px;
-    padding: 50px;
+.puntoret-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  padding: 50px;
 }

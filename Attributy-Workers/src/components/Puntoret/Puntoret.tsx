@@ -7,15 +7,18 @@ import "./Puntoret.css";
 type Props = {
   puntoret: Puntor[];
   fshijPuntorin: (id: number) => void;
-}
+};
 
-function Puntoret( { puntoret, fshijPuntorin }: Props) {
-
+function Puntoret({ puntoret, fshijPuntorin }: Props) {
   return (
     <div className="puntoret-container">
-      {puntoret.map((puntori: Puntor) => 
-          <Puntori key={puntori.id} puntori={puntori} fshijPuntorin={fshijPuntorin} />
-      )}
+      {puntoret.map((puntori: Puntor) => (
+        <Puntori
+          key={puntori.id}
+          puntori={puntori}
+          fshijPuntorin={fshijPuntorin}
+        />
+      ))}
     </div>
   );
 }
