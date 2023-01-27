@@ -26,3 +26,7 @@
     border: 1px solid black;
     transition: all 500ms ease-in-out;
 }
+.modal{
+    justify-content: center;
+    transform: translateY(200px);
+}

@@ -94,19 +94,19 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
           >
             <label>
               <span>Emri</span>
-              <input type="text" name="emri" placeholder="Emri..." />
+              <input type="text" name="emri" placeholder="Emri..." required/>
             </label>
             <label>
               <span>Mbiemri</span>
-              <input type="text" name="mbiemri" placeholder="Mbiemri..." />
+              <input type="text" name="mbiemri" placeholder="Mbiemri..." required/>
             </label>
             <label>
               <span>Pozita</span>
-              <input type="text" name="pozita" placeholder="Pozita..." />
+              <input type="text" name="pozita" placeholder="Pozita..." required/>
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="Email..." />
+              <input type="email" name="email" placeholder="Email..." required/>
             </label>
             <label>
               <span>Data e Lindjes</span>
@@ -114,6 +114,7 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
                 type="date"
                 name="dataLindjes"
                 placeholder="Data e lindjes..."
+                required
               />
             </label>
             <button type="submit">{params.id ? "Edito" : "Krijo"}</button>

@@ -5,12 +5,13 @@ import Modal from "react-modal";
 import "./Puntori.css";
 
 const customStyles = {
-  content: {
-    display: "grid",
-    placeItems: "center",
-    backgroundColor: "lightgrey",
-    width: "300px",
-  },
+  button: {
+    backgroundColor: "crimson",
+    color: "white",
+    border: "none",
+    padding: "10px",
+    borderRadius: "5px",
+  }
 };
 
 type Props = {
@@ -48,14 +49,18 @@ function Puntori({ puntori, fshijPuntorin }: Props) {
       >
         Fshij
       </button>
+
+
       <Modal
+        className="modal"
         isOpen={showModal}
-        style={customStyles.content}
         onRequestClose={() => setShowModal(false)}
       >
-        <h1>Jeni i sigurt qe doni te fshini puntorin?</h1>
-        <div className="modal-buttons">
+        <div style={{backgroundColor: "lightgrey", padding: 20}} className="modal-container">
+        <h1 style={{textAlign: "center"}}>Jeni i sigurt qe doni te fshini puntorin?</h1>
+        <div style={{display: "flex", justifyContent: "center", marginTop: "20px", gap: "10px"}} className="modal-buttons">
           <button
+          style={customStyles.button}
             onClick={() => {
               fshijPuntorin(puntori.id);
               setShowModal(false);
@@ -64,12 +69,14 @@ function Puntori({ puntori, fshijPuntorin }: Props) {
             Po
           </button>
           <button
+          style={customStyles.button}
             onClick={() => {
               setShowModal(false);
             }}
           >
             Jo
           </button>
+        </div>
         </div>
       </Modal>
     </div>
