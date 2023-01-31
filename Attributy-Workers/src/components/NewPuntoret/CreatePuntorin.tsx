@@ -59,6 +59,8 @@ function CreatePuntorin({ setPuntoret, puntoret }: Props) {
       (puntori) => puntori.id === Number(params.id)
     );
 
+    if(newPuntor.email )
+
     if (
       puntori &&
       (newPuntor.dataLindjes !== "" ||

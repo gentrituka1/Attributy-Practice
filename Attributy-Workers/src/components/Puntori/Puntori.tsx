@@ -63,6 +63,7 @@ function Puntori({ puntori, fshijPuntorin }: Props) {
             backgroundColor: "transparent",
             padding: 50,
             display: "grid",
+            justifyContent: "center",
           }}
           className="modal-container"
         >
