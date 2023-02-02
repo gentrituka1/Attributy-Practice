@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Puntor } from "../../types";
 import "./CreatePuntorin.css";
