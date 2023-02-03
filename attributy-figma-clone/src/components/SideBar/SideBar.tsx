@@ -4,6 +4,7 @@ import "./SideBar.css";
 function SideBar() {
   return (
     <aside className="side-bar">
+        <div>
       <button className="side-bar__button__div">
         <span className="side-bar__plus">+</span>
         <span className="side-bar__newfolder__span">New Folder</span>
@@ -44,6 +45,10 @@ function SideBar() {
         </div>
         <button>12</button>
       </div>
+      </div>
+      <div className="help-n-support">
+        <p>Help and Support</p>
+    </div>
     </aside>
   );
 }

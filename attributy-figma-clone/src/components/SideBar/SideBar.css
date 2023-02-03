@@ -1,7 +1,7 @@
 .side-bar {
   background-color: #ffff;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+    align-content: space-between;
   gap: 10px;
 }
 .side-bar__button__div {
@@ -77,4 +77,18 @@
   text-align: right;
   letter-spacing: 0.01em;
   color: #67768f;
+}
+
+.help-n-support{
+    height: 45px;
+    padding: 10px 30px;
+}
+.help-n-support p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #334D6e;
 }
