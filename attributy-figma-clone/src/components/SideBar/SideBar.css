@@ -1,0 +1,25 @@
+.side-bar{
+    background-color: #ffff;
+    padding: 20px;
+}
+.side-bar__button__div{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding: 10px 61px 10px 62px;
+    gap: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #B3D6FF;
+}
+.side-bar__plus{
+    color: #0079FF;
+}
+.side-bar__newfolder__span{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0079FF;
+}

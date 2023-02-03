@@ -8,8 +8,8 @@ body {
   display: grid;
   grid-template:
     "header header" 44px
-    "left-side  main" auto
-    "footer footer" auto /
+    "side-bar  sub-navbar" 28px
+    "side-bar  main" auto /
     256px 1fr;
     background-color: #F5F6F8;
 }
@@ -17,12 +17,12 @@ body {
 header{
   grid-area: header;
 }
-.left-side{
-  grid-area: left-side;
+.side-bar{
+  grid-area: side-bar;
+}
+.sub-navbar{
+  grid-area: sub-navbar;
 }
 main{
   grid-area: main;
-}
-footer{
-  grid-area: footer;
 }
