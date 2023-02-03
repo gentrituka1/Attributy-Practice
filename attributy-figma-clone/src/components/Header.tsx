@@ -9,29 +9,33 @@ function Header() {
     <header>
       <div className="header-left">
         <div className="header-left__icon header-icon">
-          <TbLayoutBoardSplit className="icons" />
+          <img src="src\assets\board.svg" className="icons" />
           <p>Boards</p>
         </div>
         <div className="header-left__icon header-icon">
-          <AiOutlineSearch className="icons" />
+          <img src="src\assets\search.svg" className="icons" />
           <p>Search</p>
         </div>
         <div className="header-left__icon header-icon">
-          <AiOutlineFieldTime className="icons" />
+          <img src="src\assets\activity-log.svg" className="icons" />
           <p>Activity Log</p>
         </div>
       </div>
       <h1>Attributy.</h1>
       <div className="header-right">
           <div className="header-right__icon header-icon">
-            Something
+            <img src="src\assets\invite.svg" className="icons" />
+            <p>Invite</p>
           </div>
-          <div className="header-right__icon header-icon">Something</div>
+          <div className="header-right__icon header-icon">
+            <img src="src\assets\share.svg" className="icons" />
+            <p>Share</p>
+          </div>
           <div>
-            <IoIosNotificationsOutline className="notification-icon" />
+            <img src="src\assets\bell.svg" className="notification-icon" />
           </div>
           <div className="header-right__profile">
-            G
+            <img src="src\assets\user-photo.svg" className="user-photo" />
           </div>
       </div>
     </header>

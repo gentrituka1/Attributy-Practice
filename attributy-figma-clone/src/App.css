@@ -4,12 +4,14 @@ body {
   box-sizing: border-box;
 }
 .App {
+  height: 100vh;
   display: grid;
   grid-template:
-    "header header" 50px
+    "header header" 44px
     "left-side  main" auto
     "footer footer" auto /
     256px 1fr;
+    background-color: #F5F6F8;
 }
 
 header{
